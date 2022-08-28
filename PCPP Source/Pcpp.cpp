@@ -16,6 +16,12 @@ void Pcpp::pcout(std::string message)
 	std::cout << prefix << message << std::endl;
 }
 
+void Pcpp::pnumberout(int message)
+{
+	std::cout << prefix << message << std::endl;
+	Pcpp::pdebug("Ran Beta Function Pnumberout()");
+}
+
 
 void Pcpp::psetprefix(std::string prefix)
 {
@@ -27,6 +33,6 @@ void Pcpp::psetprefix(std::string prefix)
 void Pcpp::pdebug(std::string message)
 {
 	Pcpp::prefix = "Debug: ";
-	Pcpp::pdcout(message);
+	Pcpp::pcout(message);
 	Pcpp::prefix = Pcpp::prefixcopy;
 }

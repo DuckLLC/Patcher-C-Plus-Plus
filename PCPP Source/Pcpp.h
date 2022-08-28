@@ -19,6 +19,8 @@ public:
 	// Works
 	void pcout(std::string message);
 
+	void pnumberout(int message);
+
 	//sets prefix
 	void psetprefix(std::string prefix);
 	//Works with pcout()
