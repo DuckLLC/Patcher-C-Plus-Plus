@@ -18,8 +18,16 @@ void Pcpp::pcout(std::string message)
 
 void Pcpp::pnumberout(int message)
 {
-	std::cout << prefix << message << std::endl;
+	std::cout << message << std::endl;
 	Pcpp::pdebug("Ran Beta Function Pnumberout()");
+}
+
+void Pcpp::pdoubleint(int num1, int num2)
+{
+	Pcpp::pcout("Number 1 Inputed: ");
+	Pcpp::pnumberout(num1);
+	Pcpp::pcout("Number 2 Inputed: ");
+	Pcpp::pnumberout(num2);
 }
 
 
