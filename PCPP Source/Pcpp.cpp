@@ -22,6 +22,11 @@ void Pcpp::pnumberout(int message)
 	Pcpp::pdebug("Ran Beta Function Pnumberout()");
 }
 
+void Pcpp::pdoubleint(int num1, int num2)
+{
+	std::cout << "Number 1 inputed: " << num1 << "    " << "Number 2 inputed: " << num2 << std::endl;
+}
+
 
 void Pcpp::psetprefix(std::string prefix)
 {

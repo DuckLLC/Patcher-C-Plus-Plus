@@ -21,6 +21,8 @@ public:
 
 	void pnumberout(int message);
 
+	void pdoubleint(int num1, int num2);
+
 	//sets prefix
 	void psetprefix(std::string prefix);
 	//Works with pcout()
