@@ -30,6 +30,10 @@ void Pcpp::pdoubleint(int num1, int num2)
 	Pcpp::pnumberout(num2);
 }
 
+void Pcpp::pdoublecout(std::string mesg1, std::string mesg2)
+{
+}
+
 
 void Pcpp::psetprefix(std::string prefix)
 {

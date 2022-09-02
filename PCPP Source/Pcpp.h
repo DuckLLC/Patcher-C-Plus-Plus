@@ -23,6 +23,7 @@ public:
 
 	void pdoubleint(int num1, int num2);
 
+	void pdoublecout(std::string mesg1, std::string mesg2);
 	//sets prefix
 	void psetprefix(std::string prefix);
 	//Works with pcout()
