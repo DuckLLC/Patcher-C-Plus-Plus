@@ -9,6 +9,8 @@ private:
 	//Beta stuff
 	bool isbeta = false;
 
+	bool endl = true;
+
 	//cout vars
 	std::string prefix = "";
 	std::string prefixcopy = "";
@@ -28,7 +30,7 @@ public:
 	void psetprefix(std::string prefix);
 	//Works with pcout()
 	void pdebug(std::string message);
-
-
+	//Toggles the std::endl fuction
+	void pendltoggle(bool toggle);
 };
 

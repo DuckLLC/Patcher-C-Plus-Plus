@@ -26,7 +26,12 @@ Pcpp::~Pcpp()
 
 void Pcpp::pcout(std::string message)
 {
-	std::cout << prefix << message << std::endl;
+	if (Pcpp::endl == true) {
+		std::cout << prefix << message << std::endl;
+	}
+	else {
+		std::cout << prefix << message;
+	}
 }
 
 void Pcpp::pnumberout(int message)
@@ -58,5 +63,11 @@ void Pcpp::pdebug(std::string message)
 	Pcpp::prefix = "Debug: ";
 	Pcpp::pcout(message);
 	Pcpp::resetprefix(false);
+}
+
+void Pcpp::pendltoggle(bool toggle)
+{
+	Pcpp::endl = false;
+	Pcpp::pdebug("Endl off");
 }
 
