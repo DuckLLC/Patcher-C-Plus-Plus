@@ -1,5 +1,18 @@
 #include "Pcpp.h"
 
+void Pcpp::resetprefix(bool wipe)
+{
+	//Resets the prefix for better code
+	if (wipe == false) {
+		prefix = prefixcopy;
+	}
+	else {
+		prefix = "";
+		prefixcopy = "";
+	}
+	}
+	
+
 Pcpp::Pcpp()
 {
 	Pcpp::pcout("Patcher C++ V0.2 Loaded");
@@ -30,13 +43,11 @@ void Pcpp::pdoubleint(int num1, int num2)
 	Pcpp::pnumberout(num2);
 }
 
-void Pcpp::pdoublecout(std::string mesg1, std::string mesg2)
-{
-}
 
 
 void Pcpp::psetprefix(std::string prefix)
 {
+	Pcpp::resetprefix(true);
 	Pcpp::prefix = prefix;
 	Pcpp::prefixcopy = prefix;
 	Pcpp::pdebug("Prefix Set");
@@ -46,5 +57,6 @@ void Pcpp::pdebug(std::string message)
 {
 	Pcpp::prefix = "Debug: ";
 	Pcpp::pcout(message);
-	Pcpp::prefix = Pcpp::prefixcopy;
+	Pcpp::resetprefix(false);
 }
+
